@@ -27,6 +27,7 @@
 
     /* Typography */
     --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
@@ -833,12 +834,17 @@ body {
 
     /* Navigation */
     .nav-wrapper {
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
+        flex-wrap: nowrap;
+        gap: var(--spacing-sm);
+        justify-content: space-between;
     }
 
-    .menu-toggle {
-        display: flex;
+    .nav-container {
+        padding: 0 var(--spacing-xl);
+    }
+
+    .logo {
+        font-size: var(--font-size-lg);
     }
 
     .nav-links {
@@ -854,9 +860,11 @@ body {
         max-height: 0;
         overflow: hidden;
         transition: max-height var(--transition-base);
+        display: none;
     }
 
     .nav-links.open {
+        display: flex;
         max-height: 400px;
     }
 
@@ -864,9 +872,28 @@ body {
         padding: var(--spacing-sm) 0;
     }
 
+    .nav-actions {
+        gap: var(--spacing-sm);
+    }
+
+    .hire-me-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-xs);
+        min-width: auto;
+        flex: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
     /* Sections */
     .section {
         padding: var(--spacing-2xl) 0;
+    }
+
+    .section-container {
+        padding: 0 var(--spacing-xl);
     }
 
     .section-container {
@@ -960,8 +987,42 @@ body {
         --spacing-3xl: 2.5rem;
     }
 
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
+
     .nav-wrapper {
         padding: var(--spacing-sm) 0;
+        gap: var(--spacing-xs);
+    }
+
+    .logo {
+        font-size: var(--font-size-base);
+        min-width: 80px;
+    }
+
+    .nav-actions {
+        gap: var(--spacing-xs);
+    }
+
+    .hire-me-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+        white-space: nowrap;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+        padding: var(--spacing-xs);
+        font-size: var(--font-size-lg);
+    }
+
+    .section-container {
+        padding: 0 var(--spacing-md);
     }
 
     .hero-title {
@@ -973,8 +1034,6 @@ body {
     }
 
     .btn {
-        width: 100%;
-        justify-content: center;
         padding: var(--spacing-md) var(--spacing-md);
     }
 

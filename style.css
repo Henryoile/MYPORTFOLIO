@@ -750,6 +750,7 @@ body.dark .theme-switch-knob { background: var(--card); }
     .contact-link,
     .btn {
         min-height: 44px;
+        min-width: 44px;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
     }
@@ -765,6 +766,22 @@ body.dark .theme-switch-knob { background: var(--card); }
     .section-container {
         padding-left: var(--spacing-md);
         padding-right: var(--spacing-md);
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 16px; /* prevent auto-zoom on iOS */
+        padding: 0.75rem;
+    }
+
+    .form-textarea {
+        min-height: 120px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px; /* iOS zoom prevention */
     }
 }
 
@@ -1113,6 +1130,10 @@ body.dark .theme-switch-knob { background: var(--card); }
         max-width: 100%;
     }
 
+    .hero-image {
+        max-width: 100%;
+    }
+
     .cta-buttons {
         justify-content: center;
         gap: var(--spacing-sm);
@@ -1127,10 +1148,15 @@ body.dark .theme-switch-knob { background: var(--card); }
     /* Projects */
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
 
     .project-card {
         padding: var(--spacing-lg);
+    }
+
+    .project-image {
+        max-height: 220px;
     }
 
     /* Skills */
@@ -1141,6 +1167,15 @@ body.dark .theme-switch-knob { background: var(--card); }
     /* Contact */
     .contact-methods {
         max-width: 100%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .contact-form {
+        width: 100%;
     }
 
     .contact-link {
@@ -1168,11 +1203,19 @@ body.dark .theme-switch-knob { background: var(--card); }
     }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN - EXTRA SMALL SCREENS
+   ============================================ */
+
 @media (max-width: 480px) {
     :root {
         --spacing-xl: 1.5rem;
         --spacing-2xl: 2rem;
         --spacing-3xl: 2.5rem;
+    }
+
+    html {
+        scroll-padding-top: 64px;
     }
 
     .navbar {
@@ -1223,10 +1266,16 @@ body.dark .theme-switch-knob { background: var(--card); }
 
     .btn {
         padding: var(--spacing-md) var(--spacing-md);
+        font-size: var(--font-size-sm);
     }
 
     .cta-buttons {
         flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
     }
 
     .project-card {
@@ -1239,6 +1288,17 @@ body.dark .theme-switch-knob { background: var(--card); }
 
     .skill-category {
         padding: var(--spacing-lg);
+    }
+
+    .contact-link {
+        padding: var(--spacing-lg) var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.75rem 0.5rem;
+        font-size: 16px;
     }
 }
 

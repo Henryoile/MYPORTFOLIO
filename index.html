@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#fd3d0d" />
     <title>Henry Oile | Software Engineer & Data Specialist</title>
 
     <meta name="description"
@@ -13,6 +13,7 @@
     <meta name="author" content="Henry Oile">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -40,9 +41,13 @@
                     <a href="mailto:henryoile627@gmail.com" class="hire-me-btn" aria-label="Send hire me email">
                         Hire Me
                     </a>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"
-                        title="Toggle dark mode">
-                        <span class="theme-icon">🌙</span>
+                    <button id="theme-toggle" class="theme-toggle theme-switch" aria-label="Toggle dark mode"
+                        title="Toggle dark mode" aria-pressed="false">
+                        <span class="theme-switch-track" aria-hidden="true">
+                            <i class="fas fa-sun switch-icon sun" aria-hidden="true"></i>
+                            <i class="fas fa-moon switch-icon moon" aria-hidden="true"></i>
+                            <span class="theme-switch-knob" aria-hidden="true"></span>
+                        </span>
                     </button>
                     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                         <span class="hamburger"></span>
@@ -79,10 +84,10 @@
                     </div>
                 </div>
 
-                <div class="hero-image fade-in" style="animation-delay: 0.3s">
+                    <div class="hero-image fade-in" style="animation-delay: 0.3s">
                     <div class="hero-image-frame" aria-hidden="true"></div>
                     <img src="assets/IMG_20250823_233003.jpg" alt="Henry Oile - Software Engineer"
-                        class="profile-image">
+                        class="profile-image" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -124,7 +129,7 @@
                 <div class="projects-grid">
 
                     <article class="project-card fade-in" style="animation-delay: 0.05s">
-                        <img src="assets/project-airbnb.jpg" alt="Airbnb Reservation System screenshot" class="project-image">
+                        <img src="assets/project-airbnb.jpg" alt="Airbnb Reservation System screenshot" class="project-image" loading="lazy" decoding="async">
                         <div class="project-card-inner">
                             <div class="project-header">
                                 <h3 class="project-title">Airbnb Reservation System</h3>
@@ -147,7 +152,7 @@
                     </article>
 
                     <article class="project-card fade-in" style="animation-delay: 0.1s">
-                        <img src="assets/project-pandas.jpg" alt="Data Analysis with Pandas screenshot" class="project-image">
+                        <img src="assets/project-pandas.jpg" alt="Data Analysis with Pandas screenshot" class="project-image" loading="lazy" decoding="async">
                         <div class="project-card-inner">
                             <div class="project-header">
                                 <h3 class="project-title">Data Analysis with Pandas</h3>
@@ -170,7 +175,7 @@
                     </article>
 
                     <article class="project-card fade-in" style="animation-delay: 0.15s">
-                        <img src="assets/project-vibewriting.jpg" alt="VibeWriting screenshot" class="project-image">
+                        <img src="assets/project-vibewriting.jpg" alt="VibeWriting screenshot" class="project-image" loading="lazy" decoding="async">
                         <div class="project-card-inner">
                             <div class="project-header">
                                 <h3 class="project-title">VibeWriting</h3>
@@ -193,7 +198,7 @@
                     </article>
 
                     <article class="project-card fade-in" style="animation-delay: 0.2s">
-                        <img src="assets/project-prompt-hacker.jpg" alt="The Prompt Hacker screenshot" class="project-image">
+                        <img src="assets/project-prompt-hacker.jpg" alt="The Prompt Hacker screenshot" class="project-image" loading="lazy" decoding="async">
                         <div class="project-card-inner">
                             <div class="project-header">
                                 <h3 class="project-title">The Prompt Hacker</h3>
@@ -216,7 +221,7 @@
                     </article>
 
                     <article class="project-card fade-in" style="animation-delay: 0.25s">
-                        <img src="assets/project-space-game.jpg" alt="3D Space Exploration Game screenshot" class="project-image">
+                        <img src="assets/project-space-game.jpg" alt="3D Space Exploration Game screenshot" class="project-image" loading="lazy" decoding="async">
                         <div class="project-card-inner">
                             <div class="project-header">
                                 <h3 class="project-title">3D Space Exploration Game</h3>
@@ -293,19 +298,19 @@
                 <div class="contact-grid">
                     <div class="contact-methods fade-in" style="animation-delay: 0.2s">
                         <a href="mailto:henryoile627@gmail.com" class="contact-link" aria-label="Send email">
-                            <span class="contact-icon">✉️</span>
+                            <i class="contact-icon fas fa-envelope"></i>
                             <span class="contact-text">henryoile627@gmail.com</span>
                         </a>
 
                         <a href="https://github.com/Henryoile" target="_blank" rel="noopener noreferrer"
                             class="contact-link" aria-label="Visit GitHub profile">
-                            <span class="contact-icon">💻</span>
+                            <i class="contact-icon fab fa-github"></i>
                             <span class="contact-text">GitHub</span>
                         </a>
 
                         <a href="https://www.linkedin.com/in/oile-henry-204a013a3" target="_blank" rel="noopener noreferrer"
                             class="contact-link" aria-label="Visit LinkedIn profile">
-                            <span class="contact-icon">🔗</span>
+                            <i class="contact-icon fab fa-linkedin"></i>
                             <span class="contact-text">LinkedIn</span>
                         </a>
                     </div>

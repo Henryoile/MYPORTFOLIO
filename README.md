@@ -157,7 +157,7 @@ MYPORTFOLIO/
 Edit CSS variables in `style.css` (lines 5-40):
 ```css
 :root {
-    --accent: #2563eb;        /* Change primary color */
+    --accent: #fd3d0d;        /* Change primary color */
     --bg: #f9fafb;            /* Change background */
     --text: #0f172a;          /* Change text color */
 }

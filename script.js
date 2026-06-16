@@ -22,6 +22,7 @@ class DarkModeManager {
             document.body.classList.add('dark');
         }
 
+        // Reflect initial state on the toggle UI
         this.updateIcon();
         this.toggle.addEventListener('click', () => this.toggleTheme());
     }
@@ -35,7 +36,11 @@ class DarkModeManager {
 
     updateIcon() {
         const isDark = document.body.classList.contains('dark');
-        this.icon.textContent = isDark ? '☀️' : '🌙';
+        // Set aria state and visual active class on the switch button
+        if (this.toggle) {
+            this.toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            if (isDark) this.toggle.classList.add('active'); else this.toggle.classList.remove('active');
+        }
     }
 }
 
